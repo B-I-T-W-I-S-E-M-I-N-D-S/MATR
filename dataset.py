@@ -160,7 +160,7 @@ class THUMOS14Dataset(data.Dataset):
         
     def _devide_video_set(self):
         self.padded_video_len = {}
-        self.total_video_len = np.zeros(self.p_videos, dtype=np.int).tolist()
+        self.total_video_len = np.zeros(self.p_videos, dtype=int).tolist()
         self.total_video_set = [[] for _ in range(self.p_videos)]
         for index in range(0, len(self.video_list)):
             video_name=self.video_list[index]
