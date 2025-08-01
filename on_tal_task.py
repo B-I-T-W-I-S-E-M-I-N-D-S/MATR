@@ -299,7 +299,9 @@ def train_one_epoch(args, train_dataset, train_loader, model, criterion, optimiz
         mAP = evaluation_detection(args, proposal_json_path, subset='train', 
                                     tiou_thresholds=tiou_thresholds, verbose=True)        
     else:        
-        mAP = np.array([0,0,0,0,0], dtype=np.float)
+        # mAP = np.array([0,0,0,0,0], dtype=np.float)
+        mAP = np.array([0, 0, 0, 0, 0], dtype=float)
+
 
     metric_logger.synchronize_between_processes()  
 
@@ -392,7 +394,9 @@ def test_one_epoch(args, test_dataset, test_loader, model, criterion, optimizer,
         # import pdb;pdb.set_trace()
         ###`
     else:
-        mAP = np.array([0,0,0,0,0], dtype=np.float)
+        # mAP = np.array([0,0,0,0,0], dtype=np.float)
+        mAP = np.array([0, 0, 0, 0, 0], dtype=float)
+
     
     metric_logger.synchronize_between_processes()  
     
