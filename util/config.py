@@ -7,7 +7,7 @@ def make_parser():
     # dataset
     parser.add_argument('--video_anno', default='./data/thumos14_v2.json', type=str)
     parser.add_argument('--video_len_file', default='./output/video_len_{}.json', type=str)
-    parser.add_argument('--num_of_class', default=11, type=int)
+    parser.add_argument('--num_of_class', default=21, type=int)
     parser.add_argument('--num_frame', default=64, type=int)
     parser.add_argument('--rgb', action='store_true')
     parser.add_argument('--flow', action='store_true')
